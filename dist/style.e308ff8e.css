@@ -15,17 +15,52 @@
 .skin {
   position: relative;
 }
-.nose-wrapper{
-  position: relative;
-  left:50%;
-  top:200px;
+
+.nose-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+
 }
-.nose{
+
+.nose {
+  /*扇形鼻子*/
   box-sizing: border-box;
-  width: 10px;
-  border: solid 10px transparent;
+  width: 15px;
+  border: solid 15px transparent;
   border-top-color: red;
   border-radius: 50%;
+}
+
+.eye {
+  border: 2px solid black;
+  width: 64px;
+  height:64px;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  margin-left: -15px;
+  background: #2e2e2e;
+  border-radius: 50%;
+}
+.eye::before{
+  content:'';
+  display: block;
+  border: 2px solid black;
+  width:32px;
+  height:32px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  left:8px;
+  top:2px;
+}
+.eye.left {
+  transform: translateX(-150px);
+}
+
+.eye.right {
+  transform: translateX(150px);
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
