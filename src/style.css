@@ -20,14 +20,14 @@
   position: absolute;
   left: 50%;
   top: 150px;
-
+  margin-left: -20px;;
 }
 
 .nose {
   /*扇形鼻子*/
   box-sizing: border-box;
-  width: 15px;
-  border: solid 15px transparent;
+  width: 20px;
+  border: solid 20px transparent;
   border-top-color: red;
   border-radius: 50%;
 }
@@ -35,30 +35,42 @@
 .eye {
   border: 2px solid black;
   width: 64px;
-  height:64px;
+  height: 64px;
   position: absolute;
   left: 50%;
   top: 100px;
-  margin-left: -15px;
+  margin-left: -32px;
   background: #2e2e2e;
   border-radius: 50%;
 }
-.eye::before{
-  content:'';
+
+.eye::before {
+  content: '';
   display: block;
   border: 2px solid black;
-  width:32px;
-  height:32px;
+  width: 32px;
+  height: 32px;
   background: #fff;
   border-radius: 50%;
   position: relative;
-  left:8px;
-  top:2px;
+  left: 8px;
+  top: 2px;
 }
+
 .eye.left {
   transform: translateX(-150px);
 }
 
 .eye.right {
   transform: translateX(150px);
+}
+
+.mouth {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  margin-left: -50px;
 }
