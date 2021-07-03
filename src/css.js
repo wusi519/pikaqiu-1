@@ -1,39 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+const string = `
+.skin * { margin: 0; padding: 0; box-sizing: border-box; }
+.skin *::before,.skin *::after { box-sizing: border-box; }
 
-*::after {
-  box-sizing: border-box;
-}
-
-*::before {
-  box-sizing: border-box;
-}
-
+/*添加皮肤*/
 .skin {
+  box-sizing: border-box;
   position: relative;
   background: #ffe600;
-  height: 100vh;
+  height: 50vh;
 }
-
+  /*添加一个鼻子*/
 .nose-wrapper {
   position: absolute;
   left: 50%;
   top: 150px;
-  margin-left: -20px;;
+  margin-left: -20px;
 }
 
 .nose {
-  /*扇形鼻子*/
   box-sizing: border-box;
   width: 20px;
   border: solid 20px transparent;
   border-top-color: red;
   border-radius: 50%;
 }
-
+ /*添加眼睛*/
 .eye {
   border: 2px solid black;
   width: 64px;
@@ -66,7 +57,7 @@
 .eye.right {
   transform: translateX(150px);
 }
-
+ /*添加嘴巴*/
 .mouth {
   width: 200px;
   height: 200px;
@@ -135,6 +126,7 @@
   width: 100px;
   height: 100px;
 }
+ /*添加脸颊*/
 .face{
   width:68px;
   height: 68px;
@@ -143,38 +135,19 @@
   position:absolute;
   top:220px;
   background:#fc0d1c;
-
 }
+.face-left{
+  right:50%;
+  margin-right:156px; 
+}
+.face-right{
+  left:50%;
+  margin-left:156px;     
+}
+
 .face:hover{
   transform: rotate(45deg);
   -webkit-animation:box .8s infinite ;
 }
-.face-left{
-  right:50%;
-  margin-right:156px; ;
-}
-.face-right{
-  left:50%;
-  margin-left:156px; ;
-}
-
-
-@-webkit-keyframes box{
-  0%{
-    top:220px;
-  }
-  20%{
-    border-radius:50%;  /*从20%的地方才开始变形*/
-  }
-  50%{
-    top:190px;
-    border-bottom-right-radius:25px;
-  }
-  80%{
-    border-radius:50%;  /*到80%的地方恢复原状*/
-  }
-  100%{
-    top:220px;
-  }
-}
-
+`
+export default string
