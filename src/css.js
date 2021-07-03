@@ -144,7 +144,7 @@ const string = `
   left:50%;
   margin-left:156px;     
 }
-
+ /*添加动画*/
 .face:hover{
   transform: rotate(45deg);
   -webkit-animation:box .8s infinite ;
